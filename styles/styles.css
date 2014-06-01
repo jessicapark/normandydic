@@ -1,0 +1,86 @@
+body {
+  font-family: monospace;
+  font-size: 18px;
+  background: #111;
+  color: #666;
+  margin: 0;
+  padding: 0;
+}
+
+#header{
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 108%;
+  height: 108%;
+  margin-top: -4%;
+  margin-left: -4%;
+}
+
+li.layer{
+  width: 100%;
+}
+.layer img:nth-child(2){
+  margin-top: -82%;
+  opacity: 0;
+}
+.layer:nth-child(3) img{
+  width: 394px;
+  height: 394px;
+  position: relative;
+  margin: 80px auto;
+}
+
+.layer:nth-child(4) img{
+  margin-top: -12%;
+}
+
+.layer:nth-child(5) img{
+  margin-top: -10%;
+  margin-left: -10%;
+}
+.layer:nth-child(6) img{
+  width: 110px;
+  height: 110px;
+  position: relative;
+  margin: 40% auto;
+}
+.layer:nth-child(7) img{
+  margin-top: -10%;
+  margin-left: 10%;
+}
+.layer:nth-child(8) img{
+  width: 785px;
+  height: 401px;
+  position: relative;
+  margin: 80px auto;
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.scene {
+  padding: 0;
+  margin: 0;
+}
+
+.bg_static {
+  width: 100%;
+  height: 100%;
+  opacity: .08;
+  filter: alpha(opacity=8);
+  -ms-filter: "alpha(opacity=8)";
+  background: transparent url(../images/gif.gif) repeat;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}

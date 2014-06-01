@@ -1,71 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Normandydic by jessicapark</title>
+<head>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Normandydic</h1>
-        <p></p>
+	<meta charset="utf-8">
 
-        <p class="view"><a href="https://github.com/jessicapark/normandydic">View the Project on GitHub <small>jessicapark/normandydic</small></a></p>
+	<title>NORMANDY DICTIONARY</title>
+
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/glitch.css"/>
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+
+</head>
+<body>
+	<header id="header">
+		<div id="container" class="container">
+			<ul id="scene" class="scene">
+				<li class="layer" data-depth="0.10"><img src="images/cover-bg1.png"><img id="cover-red1" src="images/cover-bg1-red.png"></li>
+				<li class="layer" data-depth="0.30"><img src="images/cover-bg2.png"><img id="cover-red2" src="images/cover-bg2-red.png"></li>
+				<li class="layer" data-depth="0.50"><img src="images/title.png"></li>
+				<li class="layer" data-depth="0.60"><img src="images/cover-bg3.png"></li>
+				<li class="layer" data-depth="0.80"><img src="images/cover-bg4.png"></li>
+				<li class="layer" data-depth="0.90"><img src="images/scrolldown.png"></li>
+				<li class="layer" data-depth="1.00"><img src="images/cover-bg5.png"></li>
+				<li class="layer" data-depth="1.20"><img id="title-eg" src="images/title-eg.png"></li>
+			</ul>
+		</div>
+		<div class="bg_static"></div>
+	</header>
+
+	<section id="fade">
+
+	</section>
 
 
-        <ul>
-          <li><a href="https://github.com/jessicapark/normandydic/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/jessicapark/normandydic/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/jessicapark/normandydic">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+	<!-- Scripts -->
+	<script src="scripts/parallax.js"></script>
+	<script>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+	function findDimensions(){
+	  winWidth = document.documentElement.clientWidth;
+	  winHeight = document.documentElement.clientHeight;
+	  ratio = parseInt(winWidth)/parseInt(winHeight);
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+	  document.getElementById('header').style.width = winWidth + "px";
+	  document.getElementById('header').style.height = winHeight + "px";
+	  document.getElementById('fade').style.width = winWidth + "px";
+	  document.getElementById('fade').style.height = winHeight + "px";
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+	  if(ratio<(3/2)){
+        document.getElementById('scene').style.width = "1300px";
+        document.getElementById('scene').style.left = "50%";
+        document.getElementById('scene').style.marginLeft = "-650px";
+      }else{
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+      }
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+	}
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+	window.onload=function(){
+    	findDimensions();
+  	};
+	
+	window.onresize = function(){
+	    findDimensions();
+	};
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+	window.onscroll = function () { 
+		var scroll_top;  
+		var header = document.getElementById("header");
+		var red1 = document.getElementById("cover-red1");
+		var red2 = document.getElementById("cover-red2");
+		var titleeg = document.getElementById("title-eg");
+        if (document.documentElement && document.documentElement.scrollTop) {  
+            scroll_top = document.documentElement.scrollTop;  
+        }  
+        else if (document.body) {  
+            scroll_top = document.body.scrollTop; 
+        }
+		header.style.marginTop = scroll_top + "px";
+		if (parseInt(scroll_top)>=400) {
+			header.style.marginTop = "400px";
+			red1.style.opacity = 1;
+			red2.style.opacity = 1;
+			titleeg.style.opacity = 0;
+		}else{
+			red1.style.opacity = scroll_top/400;
+			red2.style.opacity = scroll_top/400;
+			titleeg.style.opacity = 1-scroll_top/400;
+		};
+	};
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/jessicapark">jessicapark</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene, {
+	  relativeInput: true,
+	  clipRelativeInput: false
+	});
+	</script>
+</body>
 </html>
