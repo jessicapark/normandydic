@@ -156,5 +156,22 @@ section img{
     line-height: 20px;
     text-align: center;
   }
+  #header .layer img{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: -10px;
+  }
+  #header .layer:nth-child(4) img{
+    margin-top: 5%;
+  }
+
+  #header .layer:nth-child(5) img{
+    margin-top: 0;
+    margin-left: 25%;
+  }
+  #header .layer:nth-child(7) img{
+    margin-top: 5%;
+    margin-left: 30%;
+  }
 
 }
