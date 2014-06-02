@@ -10,6 +10,15 @@ body {
   letter-spacing: 2px;
   overflow-x:hidden;
 }
+#bgm{
+  position: fixed;
+  right: 30px;
+  top: 30px;
+}
+#bgm a img{
+  width: 44px;
+  height: 44px;
+}
 #header{
   position: relative;
   overflow: hidden;

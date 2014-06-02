@@ -54,6 +54,7 @@
 			<div class="bg_static"></div>	
 	</section>
 
+	<div id="bgm"><a id="bgm-btn" href="javascript:void(0);"><img id="bgm-img" src="images/musicon.png"></a></div>
 
 
 	<!-- Scripts -->
@@ -66,6 +67,9 @@
 	var parallax1 = new Parallax(scene1);
 	var scene2 = document.getElementById('scene2');
 	var parallax2 = new Parallax(scene2);
+
+    var audio = document.createElement('audio');
+    var isPlaying = true;
 
 	function findDimensions(){
 	  winWidth = document.documentElement.clientWidth;
@@ -101,10 +105,29 @@
         document.getElementById('scene2').style.marginLeft = "0px";
       }
 
-	}
+	};
+	
+	document.getElementById('bgm-btn').onclick = function(){
+		if (isPlaying) {
+			audio.src = '';
+			isPlaying = false;
+			document.getElementById('bgm-img').src = 'images/musicoff.png';
+		}
+		else{
+			audio.src = 'http://cdn1.killinglincoln.nationalgeographic.com/kennedy/1398428073/audio/tracks/ch1-lazysummer.mp3';
+			isPlaying = true;
+			document.getElementById('bgm-img').src = 'images/musicon.png';
+		}
+		
+	};
 
 	window.onload=function(){
     	findDimensions();
+
+		audio.src = 'http://cdn1.killinglincoln.nationalgeographic.com/kennedy/1398428073/audio/tracks/ch1-lazysummer.mp3';
+		audio.autoplay = "autoplay";
+		audio.loop = "loop";
+		document.body.appendChild(audio);
   	};
 	
 	window.onresize = function(){
@@ -135,7 +158,6 @@
 			titleeg.style.opacity = 1-scroll_top/200;
 		};
 	};
-
 	</script>
 </body>
 </html>
