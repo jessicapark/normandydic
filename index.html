@@ -121,15 +121,15 @@
             scroll_top = document.body.scrollTop; 
         }
 		// header.style.marginTop = scroll_top + "px";
-		if (parseInt(scroll_top)>=400) {
+		if (parseInt(scroll_top)>=200) {
 			// header.style.marginTop = "400px";
 			red1.style.opacity = 1;
 			red2.style.opacity = 1;
 			titleeg.style.opacity = 0;
 		}else{
-			red1.style.opacity = scroll_top/400;
-			red2.style.opacity = scroll_top/400;
-			titleeg.style.opacity = 1-scroll_top/400;
+			red1.style.opacity = scroll_top/200;
+			red2.style.opacity = scroll_top/200;
+			titleeg.style.opacity = 1-scroll_top/200;
 		};
 	};
 
