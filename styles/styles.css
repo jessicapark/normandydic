@@ -166,7 +166,7 @@ section img{
     z-index: 999;
   }
   #header .layer:nth-child(3) img{
-    margin: 280px auto;
+    margin: 25% auto;
   }
   #header .layer:nth-child(4) img{
     width: 50%;
