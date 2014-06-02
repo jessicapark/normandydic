@@ -1,10 +1,13 @@
 body {
-  font-family: monospace;
-  font-size: 18px;
+  font-family: "Georgia","Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Times New Roman","Times",Serif;
+  font-size: 15px;
+  line-height: 15px;
   background: #111;
-  color: #666;
+  color: #000;
   margin: 0;
   padding: 0;
+  font-style: italic;
+  letter-spacing: 2px;
 }
 
 #header{
@@ -23,36 +26,36 @@ img {
 li.layer{
   width: 100%;
 }
-.layer img:nth-child(2){
+#header .layer img:nth-child(2){
   margin-top: -82%;
   opacity: 0;
 }
-.layer:nth-child(3) img{
+#header .layer:nth-child(3) img{
   width: 394px;
   height: 394px;
   position: relative;
   margin: 80px auto;
 }
 
-.layer:nth-child(4) img{
+#header .layer:nth-child(4) img{
   margin-top: -12%;
 }
 
-.layer:nth-child(5) img{
+#header .layer:nth-child(5) img{
   margin-top: -10%;
   margin-left: -10%;
 }
-.layer:nth-child(6) img{
+#header .layer:nth-child(6) img{
   width: 110px;
   height: 110px;
   position: relative;
   margin: 40% auto;
 }
-.layer:nth-child(7) img{
+#header .layer:nth-child(7) img{
   margin-top: -10%;
   margin-left: 10%;
 }
-.layer:nth-child(8) img{
+#header .layer:nth-child(8) img{
   width: 785px;
   height: 401px;
   position: relative;
@@ -83,4 +86,59 @@ li.layer{
   z-index: 0;
   top: 0;
   left: 0;
+}
+
+section{
+  position: relative;
+  overflow: hidden;
+}
+section img{
+  display: block;
+  width: 124%;
+  height: 124%;
+  margin-top: -12%;
+  margin-left: -12%;
+}
+/*
+#sec1 {
+  background: url(../images/sec1.png) no-repeat center center fixed;
+}*/
+#sec1-t{
+  width: 154px;
+  height: 76px;
+  position: relative;
+  margin: 30% auto auto 15%;
+}
+.sec-num{
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 0;
+}
+.sec-num span{
+  font-size: 54px;
+}
+#sec1 .sec-num{
+  position: relative;
+  margin: 31% auto auto 5%;
+}
+#sec1 .layer:nth-child(4) div{
+  position: relative;
+  margin: 38% auto auto 15%;
+}
+#sec2{
+  color: #fff;
+}
+#sec2-t{
+  width: 155px;
+  height: 76px;
+  position: relative;
+  margin: 30% auto auto 15%;
+}
+#sec2 .sec-num{
+  position: relative;
+  margin: 31% auto auto 5%;
+}
+#sec2 .layer:nth-child(4) div{
+  position: relative;
+  margin: 38% auto auto 15%;
 }

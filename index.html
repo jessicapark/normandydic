@@ -11,7 +11,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=1, user-scalable=no">
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
-	<link rel="stylesheet" type="text/css" href="styles/glitch.css"/>
 	<script type="text/javascript" src="scripts/jquery.js"></script>
 
 </head>
@@ -32,14 +31,38 @@
 		<div class="bg_static"></div>
 	</header>
 
-	<section id="fade">
-
+	<section id="sec1">
+			<ul id="scene1" class="scene">
+				<li class="layer" data-depth="1.00"><img src="images/sec1.png"></li>
+				<li class="layer" data-depth="0.30"><div class="sec-num"><span>01</span>/30</div></li>
+				<li class="layer" data-depth="0.40"><img id="sec1-t" src="images/sec1-t.png"></li>
+				<li class="layer" data-depth="0.40"><div><p> 德军为防御盟军登陆在西线建造了 15,641 个掩体</p><p>及 799 座钢筋水泥炮台，埋下了 800 万个地雷。</p></div></li>
+			</ul>	
+			<div class="bg_static"></div>	
 	</section>
+
+	<section id="sec2">
+			<ul id="scene2" class="scene">
+				<li class="layer" data-depth="1.00"><img src="images/sec2.png"></li>
+				<li class="layer" data-depth="0.30"><div class="sec-num"><span>02</span>/30</div></li>
+				<li class="layer" data-depth="0.40"><img id="sec2-t" src="images/sec2-t.png"></li>
+				<li class="layer" data-depth="0.40"><div><p> 士兵在登陆艇上看着法国旅游手册，</p><p>纳粹德国在当时几乎吞并了整个欧洲。</p></div></li>
+			</ul>	
+			<div class="bg_static"></div>	
+	</section>
+
 
 
 	<!-- Scripts -->
 	<script src="scripts/parallax.js"></script>
 	<script>
+
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+	var scene1 = document.getElementById('scene1');
+	var parallax1 = new Parallax(scene1);
+	var scene2 = document.getElementById('scene2');
+	var parallax2 = new Parallax(scene2);
 
 	function findDimensions(){
 	  winWidth = document.documentElement.clientWidth;
@@ -48,8 +71,10 @@
 
 	  document.getElementById('header').style.width = winWidth + "px";
 	  document.getElementById('header').style.height = winHeight + "px";
-	  document.getElementById('fade').style.width = winWidth + "px";
-	  document.getElementById('fade').style.height = winHeight + "px";
+	  document.getElementById('sec1').style.width = winWidth + "px";
+	  document.getElementById('sec1').style.height = winHeight + "px";
+	  document.getElementById('sec2').style.width = winWidth + "px";
+	  document.getElementById('sec2').style.height = winHeight + "px";
 
 	  if(ratio<(3/2)){
         document.getElementById('scene').style.width = "1300px";
@@ -96,11 +121,6 @@
 		};
 	};
 
-	var scene = document.getElementById('scene');
-	var parallax = new Parallax(scene, {
-	  relativeInput: true,
-	  clipRelativeInput: false
-	});
 	</script>
 </body>
 </html>
