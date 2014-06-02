@@ -51,7 +51,7 @@ li.layer{
   width: 394px;
   height: 394px;
   position: relative;
-  margin: 80px auto;
+  margin: 10% auto;
 }
 
 #header .layer:nth-child(4) img{
@@ -85,7 +85,7 @@ li.layer{
   width: 785px;
   height: 401px;
   position: relative;
-  margin: 60px auto;
+  margin: 10% auto;
   opacity: 0.9;
 }
 
