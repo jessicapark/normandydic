@@ -165,6 +165,9 @@ section img{
   #header .layer:nth-child(3){
     z-index: 999;
   }
+  #header .layer:nth-child(3) img{
+    margin: 280px auto;
+  }
   #header .layer:nth-child(4) img{
     width: 50%;
     height: 50%;
@@ -177,17 +180,20 @@ section img{
     margin-left: 20%;
     margin-top: 20%;
   }
+  #header .layer:nth-child(6) img{
+    margin: 50% auto;
+  }
   #header .layer:nth-child(7) img{
     width: 60%;
     height: 60%;
     margin-left: 20%;
-    margin-top: 20%;
+    margin-top: 25%;
   }
   #header .layer:nth-child(8) img{
     width: 700px;
     height: 358px;
     position: relative;
-    margin: 250px auto;
+    margin: 350px auto;
   }
 
 
