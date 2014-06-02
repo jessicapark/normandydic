@@ -101,55 +101,57 @@ section img{
 #sec1 {
   background: url(../images/sec1.png) no-repeat center center fixed;
 }*/
-#sec1-t{
-  width: 154px;
-  height: 76px;
-  position: relative;
-  margin: 30% auto auto 15%;
-}
 .sec-num{
   font-size: 30px;
   font-weight: bold;
   letter-spacing: 0;
-  width: 130px;
+  position: relative;
+  margin: 31% auto auto 50px;
+}
+.sec-t{
+  width: 193px;
+  height: 80px;
+  position: relative;
+  margin: 30% auto auto 180px;
+
+}
+.sec-eg{
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+.sec-d{
+  position: relative;
+  margin: 40% auto auto 180px;
 }
 .sec-num span{
   font-size: 54px;
 }
-#sec1 .sec-num{
-  position: relative;
-  margin: 31% auto auto 5%;
-}
 #sec1 .layer:nth-child(4) div{
   position: relative;
-  margin: 38% auto auto 15%;
+  margin: 35% auto auto 400px;
 }
 #sec2{
   color: #fff;
 }
-#sec2-t{
-  width: 155px;
-  height: 76px;
-  position: relative;
-  margin: 30% auto auto 15%;
-}
-#sec2 .sec-num{
-  position: relative;
-  margin: 31% auto auto 5%;
-}
 #sec2 .layer:nth-child(4) div{
   position: relative;
-  margin: 38% auto auto 15%;
+  margin: 35% auto auto 400px;
 }
 @media screen and (max-width: 650px) {
   .sec-num{
+    text-align: center;
     margin:280px auto !important;
   }
   .sec-t{
     margin:340px auto !important;
   }
+  .sec-eg{
+    text-align: center;
+    margin:440px auto !important;
+  }
   .sec-d{
-    margin: 450px auto !important;
+    margin: 500px auto !important;
     width: 350px;
     line-height: 20px;
     text-align: center;
