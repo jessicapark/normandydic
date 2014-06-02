@@ -180,5 +180,12 @@ section img{
     margin-left: 20%;
     margin-top: 20%;
   }
+  #header .layer:nth-child(8) img{
+    width: 700px;
+    height: 358px;
+    position: relative;
+    margin: 250px auto;
+  }
+
 
 }
