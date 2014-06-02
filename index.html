@@ -77,15 +77,15 @@
 	  document.getElementById('sec2').style.height = winHeight + "px";
 
 	  if(ratio<(3/2)){
-        document.getElementById('scene').style.width = "1300px";
+        document.getElementById('scene').style.width = winHeight*3/2 + 400 + "px";
         document.getElementById('scene').style.left = "50%";
-        document.getElementById('scene').style.marginLeft = "-650px";
-        document.getElementById('scene1').style.width = "1300px";
+        document.getElementById('scene').style.marginLeft = -winHeight*3/4-200 + "px";
+        document.getElementById('scene1').style.width = winHeight*3/2 + 400 + "px";
         document.getElementById('scene1').style.left = "50%";
-        document.getElementById('scene1').style.marginLeft = "-650px";
-        document.getElementById('scene2').style.width = "1300px";
+        document.getElementById('scene1').style.marginLeft = -winHeight*3/4-200 + "px";
+        document.getElementById('scene2').style.width = winHeight*3/2 + 400 + "px";
         document.getElementById('scene2').style.left = "50%";
-        document.getElementById('scene2').style.marginLeft = "-650px";
+        document.getElementById('scene2').style.marginLeft = -winHeight*3/4-200 + "px";
       }else{
         document.getElementById('scene').style.width = "100%";
         document.getElementById('scene').style.left = "0px";
