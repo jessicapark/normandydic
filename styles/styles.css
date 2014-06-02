@@ -162,7 +162,7 @@ section img{
     margin-left: 25%;
     margin-top: 20%;
   }
-  #header .layer:nth-child(3) img{
+  #header .layer:nth-child(3){
     z-index: 999;
   }
   #header .layer:nth-child(4) img{
