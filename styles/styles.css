@@ -122,7 +122,6 @@ body {
   position: absolute;
   right: 100px;
   bottom: 125px;
-  background: url('../images/ld-boat.png') no-repeat;
   -webkit-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
   -moz-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
   animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
@@ -132,7 +131,6 @@ body {
   height: 23px;
   position: absolute;
   bottom: 95px;
-  background: url('../images/ld-boat-ref.png') no-repeat;
   -webkit-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
   -moz-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
   animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
