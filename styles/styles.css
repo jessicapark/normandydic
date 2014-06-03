@@ -9,6 +9,7 @@ body {
   font-style: italic;
   letter-spacing: 2px;
   overflow-x:hidden;
+  -webkit-font-smoothing: antialiased;
 }
 #bgm{
   position: fixed;
