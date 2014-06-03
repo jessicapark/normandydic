@@ -11,11 +11,216 @@
 	<meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1, user-scalable=no">
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
-	<script type="text/javascript" src="scripts/jquery.js"></script>
+	
+	<script src="scripts/idangerous.swiper-2.1.min.js"></script>
+	
+<style type="text/css">
+html, body, svg { 
+	height: 100%; 
+	width: 100%; 
+	margin: 0; 
+	padding: 0;
+	overflow: hidden;
+}
+body {
+  background : #141414;  
+  font-family: "Georgia","Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Times New Roman","Times",Serif;
+  font-size: 16px;
+  color: #fff;
+  font-style: italic;
+  letter-spacing: 3px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+}
+.bg_static {
+  width: 100%;
+  height: 100%;
+  opacity: .03;
+  filter: alpha(opacity=3);
+  -ms-filter: "alpha(opacity=3)";
+  background: transparent url(images/gif.gif) repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#ld-num{
+	width: 100%;
+	height: 100%;
+	font-size: 100px;
+	text-align: center;
+	vertical-align:middle;
+	color: #141414;
+	position: absolute;
+	top: 50px;
+}
+#ld-date{
+	text-align: center;
+	position: relative;
+	width: 45%;
+	margin: 210px auto auto auto;
+	padding: 5px 0;
+	border-top: double #fff;
+	border-bottom: double #fff;
+}
+#ld-moon{
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	position: absolute;
+	left: 76px;
+	top: 75px;
+	background: #953835;
+}
+#ld-mt1{
+	width: 80px;
+	height: 70px;
+	left: 30px;
+	top: 60px;
+	position: absolute;
+}
+#ld-mt2{
+	width: 80px;
+	height: 70px;
+	left: 85px;
+	top: 90px;
+	position: absolute;
 
+}
+#ld-mt2 img{
+	width: 50%;
+	height: 50%;
+}
+#ld-mt3{
+	width: 80px;
+	height: 70px;
+	left: 160px;
+	top: 80px;
+	position: absolute;
+}
+#ld-circle{
+	background: #272727;
+	width: 300px;
+	height: 300px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: -150px auto auto -150px;
+	border-radius: 150px;
+	overflow: hidden;
+}
+#ld-border{
+	background: url('images/ld-wave.png') repeat-x;
+	width: 100%;
+	height: 7px;
+}
+#ld-water{
+	background: #6aa8ad;
+	width: 100%;
+	height: 100%;
+}
+#ld-wave1{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	-webkit-animation: ld-wave1 0.5s ease-in-out alternate infinite;
+	-moz-animation: ld-wave1 0.5s ease-in-out alternate infinite;
+	animation: ld-wave1 0.5s ease-in-out alternate infinite;
+}
+@-webkit-keyframes ld-wave1{
+	0%{
+		height: 180px;
+	}
+	100%{
+		height: 185px;
+	}
+}
+#ld-boat{
+	width: 59px;
+	height: 23px;
+	position: absolute;
+	right: 100px;
+	bottom: 125px;
+	-webkit-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
+	-moz-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
+	animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
+}
+#ld-boat-ref{
+	width: 59px;
+	height: 23px;
+	position: absolute;
+	bottom: 95px;
+	-webkit-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
+	-moz-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
+	animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
+}
+@-webkit-keyframes ld-boat{
+	0%{
+		-webkit-transform: translateY(12px);   
+		-moz-transform: translateY(12px);   
+		transform: translateY(12px);   
+	}
+	100%{
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+@-webkit-keyframes boat-along{
+	0%{
+		left: 55%;
+	}
+	100%{
+		left: 60%;
+	}
+}
+#ld-wave2{
+	width: 90%;
+	position: absolute;
+	bottom: 80px;
+	left: 5%;
+	-webkit-animation: ld-wave2 0.5s ease-in-out alternate infinite;
+	-moz-animation: ld-wave2 0.5s ease-in-out alternate infinite;
+	animation: ld-wave2 0.5s ease-in-out alternate infinite;
+}
+@-webkit-keyframes ld-wave2{
+	0%{
+		height: 43px;
+	}
+	100%{
+		height: 53px;
+	}
+}
+.swiper-container{
+	display: none;
+}
+	</style>
 </head>
 <body>
-	<header id="header">
+	<div id="loading">
+	<div id="ld-circle">
+		<div id="ld-num">0%</div>
+		<div id="ld-moon"></div>
+		<div id="ld-mt1"><img src="images/ld-mt1.png"></div>
+		<div id="ld-mt2"><img src="images/ld-mt1.png"></div>
+		<div id="ld-mt3"><img src="images/ld-mt1.png"></div>
+		<div id="ld-wave1">
+			<div id="ld-border"></div>
+			<div id="ld-water"></div>
+		</div>
+		<div id="ld-boat"><img src="images/ld-boat.png"></div>
+		<div id="ld-wave2">
+			<div id="ld-border"></div>
+			<div id="ld-water"></div>
+		</div>
+		<div id="ld-boat-ref"><img src="images/ld-boat-ref.png"></div>
+		<div id="ld-date">1944.06.06</div>
+	</div>
+	<div class="bg_static"></div>
+</div>
+<div class="swiper-container">
+<div class="swiper-wrapper">
+	<!--<div  class="swiper-slide">
+<section id="sec0">
 		<div id="container" class="container">
 			<ul id="scene" class="scene">
 				<li class="layer" data-depth="0.10"><img src="images/cover-bg1.png"><img id="cover-red1" src="images/cover-bg1-red.png"></li>
@@ -25,89 +230,139 @@
 				<li class="layer" data-depth="0.80"><img src="images/cover-bg4.png"></li>
 				<li class="layer" data-depth="0.90"><img src="images/scrolldown.png"></li>
 				<li class="layer" data-depth="0.95"><img src="images/cover-bg5.png"></li>
-				<li class="layer" data-depth="1.20"><img id="title-eg" src="images/title-eg.png"></li>
+				<li class="layer" data-depth="1.00"><img id="title-eg" src="images/title-eg.png"></li>
 			</ul>
 		</div>
-		<div class="bg_static"></div>
-	</header>
-
-	<section id="sec1">
-			<ul id="scene1" class="scene">
-				<li class="layer" data-depth="1.00"><img src="images/sec1.png"></li>
+		<div class="bg_static"></div>	
+	</section>
+</div>-->
+<div  class="swiper-slide">
+	<section id="">
+			<ul id="" class="scene">
+				<li class="layer" data-depth="1.00"><img tempsrc="images/sec1.png"></li>
 				<li class="layer" data-depth="0.30"><div class="sec-num"><span>01</span>/30</div></li>
-				<li class="layer" data-depth="0.40"><img class="sec-t" id="sec1-t" src="images/sec1-t.png"></li>
+				<li class="layer" data-depth="0.40"><img class="sec-t" id="sec1-t" tempsrc="images/sec1-t.png"></li>
 				<li class="layer" data-depth="0.40"><div class="sec-eg">n.line of defense
 </div></li>
 				<li class="layer" data-depth="0.40"><div class="sec-d"><p> 德军为防御盟军登陆在西线建造了 15,641 个掩体及 799 座钢筋水泥炮台，</p><p>埋下了 800 万个地雷。</p></div></li>
 			</ul>	
-			<div class="bg_static"></div>	
+			
 	</section>
-
-	<section id="sec2">
-			<ul id="scene2" class="scene">
-				<li class="layer" data-depth="1.00"><img src="images/sec2.png"></li>
+</div>
+<div  class="swiper-slide">
+	<section id="">
+			<ul id="" class="scene">
+				<li class="layer" data-depth="1.00"><img tempsrc="images/sec2.png"></li>
 				<li class="layer" data-depth="0.30"><div class="sec-num"><span>02</span>/30</div></li>
-				<li class="layer" data-depth="0.40"><img class="sec-t" id="sec2-t" src="images/sec2-t.png"></li>
+				<li class="layer" data-depth="0.40"><img class="sec-t" id="sec2-t" tempsrc="images/sec2-t.png"></li>
 				<li class="layer" data-depth="0.40"><div class="sec-eg">n.Optimism</div></li>
 				<li class="layer" data-depth="0.40"><div class="sec-d"><p> 士兵在登陆艇上看着法国旅游手册，</p><p>纳粹德国在当时几乎吞并了整个欧洲。</p></div></li>
 			</ul>	
-			<div class="bg_static"></div>	
+			
 	</section>
+</div>
+<div  class="swiper-slide">
+	<section id="">
+			<ul id="" class="scene">
+				<li class="layer" data-depth="1.00"><img tempsrc="images/sec1.png"></li>
+				<li class="layer" data-depth="0.30"><div class="sec-num"><span>03</span>/30</div></li>
+				<li class="layer" data-depth="0.40"><img class="sec-t" id="sec1-t" tempsrc="images/sec1-t.png"></li>
+				<li class="layer" data-depth="0.40"><div class="sec-eg">n.line of defense
+</div></li>
+				<li class="layer" data-depth="0.40"><div class="sec-d"><p> 德军为防御盟军登陆在西线建造了 15,641 个掩体及 799 座钢筋水泥炮台，</p><p>埋下了 800 万个地雷。</p></div></li>
+			</ul>	
+			
+	</section>
+</div>
+<div  class="swiper-slide">
+	<section id="">
+			<ul id="" class="scene">
+				<li class="layer" data-depth="1.00"><img tempsrc="images/sec2.png"></li>
+				<li class="layer" data-depth="0.30"><div class="sec-num"><span>04</span>/30</div></li>
+				<li class="layer" data-depth="0.40"><img class="sec-t" id="sec2-t" tempsrc="images/sec2-t.png"></li>
+				<li class="layer" data-depth="0.40"><div class="sec-eg">n.Optimism</div></li>
+				<li class="layer" data-depth="0.40"><div class="sec-d"><p> 士兵在登陆艇上看着法国旅游手册，</p><p>纳粹德国在当时几乎吞并了整个欧洲。</p></div></li>
+			</ul>	
+			
+	</section>
+</div>
+<div  class="swiper-slide">
+	<section id="">
+			<ul id="" class="scene">
+				<li class="layer" data-depth="1.00"><img tempsrc="images/sec1.png"></li>
+				<li class="layer" data-depth="0.30"><div class="sec-num"><span>05</span>/30</div></li>
+				<li class="layer" data-depth="0.40"><img class="sec-t" id="sec1-t" tempsrc="images/sec1-t.png"></li>
+				<li class="layer" data-depth="0.40"><div class="sec-eg">n.line of defense
+</div></li>
+				<li class="layer" data-depth="0.40"><div class="sec-d"><p> 德军为防御盟军登陆在西线建造了 15,641 个掩体及 799 座钢筋水泥炮台，</p><p>埋下了 800 万个地雷。</p></div></li>
+			</ul>	
+			
+	</section>
+</div>
+<div  class="swiper-slide">
+	<section id="">
+			<ul id="" class="scene">
+				<li class="layer" data-depth="1.00"><img tempsrc="images/sec2.png"></li>
+				<li class="layer" data-depth="0.30"><div class="sec-num"><span>06</span>/30</div></li>
+				<li class="layer" data-depth="0.40"><img class="sec-t" id="sec2-t" tempsrc="images/sec2-t.png"></li>
+				<li class="layer" data-depth="0.40"><div class="sec-eg">n.Optimism</div></li>
+				<li class="layer" data-depth="0.40"><div class="sec-d"><p> 士兵在登陆艇上看着法国旅游手册，</p><p>纳粹德国在当时几乎吞并了整个欧洲。</p></div></li>
+			</ul>	
+			
+	</section>
+</div>
+	<!--<div id="bgm"><a id="bgm-btn" href="javascript:void(0);"><img id="bgm-img" tempsrc="images/musicon.png"></a></div>-->
 
-	<div id="bgm"><a id="bgm-btn" href="javascript:void(0);"><img id="bgm-img" src="images/musicon.png"></a></div>
 
+
+   
+</div>	<!-- swiper-wrapper -->
+</div>  <!-- swiper-container -->
 
 	<!-- Scripts -->
-	<script src="scripts/parallax.js"></script>
+		<!--<script src="scripts/parallax.js"></script>-->
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/jquery.parallax.min.js"></script>
+	
 	<script>
-
-	var scene = document.getElementById('scene');
-	var parallax = new Parallax(scene);
-	var scene1 = document.getElementById('scene1');
-	var parallax1 = new Parallax(scene1);
-	var scene2 = document.getElementById('scene2');
-	var parallax2 = new Parallax(scene2);
-
-    var audio = document.createElement('audio');
-    var isPlaying = true;
+var a=0;
+var b=0;
+	// $('#scene').parallax();
+//$scene.parallax('enable');
+//$('#scene').parallax('disable');
+	
+	
+	
+   // var audio = document.createElement('audio');
+    //var isPlaying = true;
 
 	function findDimensions(){
 	  winWidth = document.documentElement.clientWidth;
 	  winHeight = document.documentElement.clientHeight;
 	  ratio = parseInt(winWidth)/parseInt(winHeight);
 
-	  document.getElementById('header').style.width = winWidth + "px";
-	  document.getElementById('header').style.height = winHeight + "px";
-	  document.getElementById('sec1').style.width = winWidth + "px";
-	  document.getElementById('sec1').style.height = winHeight + "px";
-	  document.getElementById('sec2').style.width = winWidth + "px";
-	  document.getElementById('sec2').style.height = winHeight + "px";
+	  $('.swiper-container').height(winHeight);
+	  $('section').width(winWidth);
+	  $('section').height(winHeight);
+
+	 
 
 	  if(ratio<(3/2)){
-        document.getElementById('scene').style.width = winHeight*3/2 + 400 + "px";
-        document.getElementById('scene').style.left = "50%";
-        document.getElementById('scene').style.marginLeft = -winHeight*3/4-200 + "px";
-        document.getElementById('scene1').style.width = winHeight*3/2 + 400 + "px";
-        document.getElementById('scene1').style.left = "50%";
-        document.getElementById('scene1').style.marginLeft = -winHeight*3/4-200 + "px";
-        document.getElementById('scene2').style.width = winHeight*3/2 + 400 + "px";
-        document.getElementById('scene2').style.left = "50%";
-        document.getElementById('scene2').style.marginLeft = -winHeight*3/4-200 + "px";
+	  	$('.scene').width(winHeight*3/2 +400 );
+	  	$('.scene').css('left','50%');
+	  	var margintemp=-winHeight*3/4-200;
+	  	$('.scene').css('marginLeft',margintemp);
+	  	spd=300;
+      //  document.getElementById('scene').style.width = winHeight*3/2 + 400 + "px";
+       
       }else{
-        document.getElementById('scene').style.width = "100%";
-        document.getElementById('scene').style.left = "0px";
-        document.getElementById('scene').style.marginLeft = "0px";
-        document.getElementById('scene1').style.width = "100%";
-        document.getElementById('scene1').style.left = "0px";
-        document.getElementById('scene1').style.marginLeft = "0px";
-        document.getElementById('scene2').style.width = "100%";
-        document.getElementById('scene2').style.left = "0px";
-        document.getElementById('scene2').style.marginLeft = "0px";
+       	$('.scene').css({'width':'100%','left':'0','marginLeft':'0' });
+        
       }
 
 	};
 	
-	document.getElementById('bgm-btn').onclick = function(){
+/*	document.getElementById('bgm-btn').onclick = function(){
 		if (isPlaying) {
 			audio.src = '';
 			isPlaying = false;
@@ -119,22 +374,24 @@
 			document.getElementById('bgm-img').src = 'images/musicon.png';
 		}
 		
-	};
+	};*/
 
 	window.onload=function(){
-    	findDimensions();
-
+    	
+//所有内容
+/*
 		audio.src = 'http://cdn1.killinglincoln.nationalgeographic.com/kennedy/1398428073/audio/tracks/ch1-lazysummer.mp3';
 		audio.autoplay = "autoplay";
 		audio.loop = "loop";
 		document.body.appendChild(audio);
+		*/
   	};
 	
-	window.onresize = function(){
+	/*window.onresize = function(){
 	    findDimensions();
 	};
-
-	window.onscroll = function () { 
+*/
+	/*window.onscroll = function () { 
 		var scroll_top;  
 		// var header = document.getElementById("header");
 		var red1 = document.getElementById("cover-red1");
@@ -157,7 +414,94 @@
 			red2.style.opacity = scroll_top/200;
 			titleeg.style.opacity = 1-scroll_top/200;
 		};
-	};
+	};*/
+function acter(temp){
+
+	b=parseInt(temp);
+	//alert(b);
+	if(spd<500){
+	 $('.swiper-slide:eq('+(b-1)+')').find('section ul').parallax();
+	 $('.swiper-slide:eq('+(b)+')').find('section ul').parallax();
+	$('.swiper-slide:eq('+(b+1)+')').find('section ul').parallax();
+}else{
+	$('.swiper-slide:eq('+(b-2)+')').find('section ul').parallax();
+	$('.swiper-slide:eq('+(b-1)+')').find('section ul').parallax();
+	 $('.swiper-slide:eq('+(b)+')').find('section ul').parallax();
+	$('.swiper-slide:eq('+(b+1)+')').find('section ul').parallax();
+	$('.swiper-slide:eq('+(b+2)+')').find('section ul').parallax();
+}
+	if(spd<500){
+	
+	$('.swiper-slide:eq('+(b-2)+')').find('section').hide();
+	$('.swiper-slide:eq('+(b+2)+')').find('section').hide();
+}else{
+	$('.swiper-slide:eq('+(b-10)+')').find('section').hide();
+	$('.swiper-slide:eq('+(b+10)+')').find('section').hide();
+}
+if(spd<500){
+	$('.swiper-slide:eq('+(b-1)+')').find('section').show();
+	$('.swiper-slide:eq('+(b)+')').find('section').show();
+	$('.swiper-slide:eq('+(b+1)+')').find('section').show();
+}else{
+	$('.swiper-slide:eq('+(b-3)+')').find('section').show();
+	//$('.swiper-slide:eq('+(b-1)+')').find('section').show();
+	$('.swiper-slide:eq('+(b)+')').find('section').show();
+	//$('.swiper-slide:eq('+(b+1)+')').find('section').show();
+	$('.swiper-slide:eq('+(b+3)+')').find('section').show();
+}
+}
+function getimg(){
+	//alert(a);
+		var img=$('.swiper-container img:eq('+a+')');
+		var src=img.attr('tempsrc');
+		
+			img.attr('src',src);
+			
+		
+	img.load(function(){
+
+	a++;
+	
+	if(a<8){
+		$('#ld-num').text(parseInt(a*11.7)+"%");
+		
+	}else if(a==8){
+		$('#loading').hide();
+		$('.swiper-container').show();
+	}
+	getimg();
+})
+}
+
+$(document).ready(function() {
+	//DOM结构
+	document.body.style.overflow='hidden';
+	$('.swiper-container img').each(function(index, el) {
+		if(typeof($(this).attr('tempsrc'))!="undefined"){
+			$(this).attr('src','');}
+	});
+	
+
+	findDimensions();
+	if(parseInt(document.documentElement.clientWidth)>800){
+	spd=1000;
+	$('.swiper-slide section:eq(9)').nextAll().hide();
+    }else
+	{   spd=400;
+		$('.swiper-slide section').hide();}
+	getimg();
+	acter(1);
+	$('.swiper-slide:eq(0)').find('section ul').parallax();
+ var mySwiper = new Swiper('.swiper-container',{mode: 'vertical',mousewheelControl:'true',speed:spd,onSlideChangeEnd: function(swiper){
+ 	     acter(mySwiper.activeIndex);
+ 	     
+    }});
+	
+	
+	
+
+	
+});
 	</script>
 </body>
 </html>
