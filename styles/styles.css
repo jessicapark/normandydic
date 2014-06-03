@@ -269,8 +269,12 @@ li.layer{
 }
 
 section{
+  color: #000;
   position: relative;
   overflow: hidden;
+}
+.white{
+  color: #fff;
 }
 section img{
   display: block;
@@ -301,24 +305,54 @@ section img{
   font-size: 30px;
   font-weight: bold;
   letter-spacing: -1px;
+  margin: 30% auto auto 400px;
+  padding-top: 60px;
 }
 .sec-d{
   position: relative;
-  margin: 40% auto auto 180px;
+  margin: 30% auto auto 180px;
+  padding-top: 100px;
 }
 .sec-num span{
   font-size: 54px;
 }
-#sec1 .layer:nth-child(4) div{
-  position: relative;
-  margin: 35% auto auto 400px;
+
+.right{
+  text-align: right;
 }
-#sec2{
-  color: #fff;
+.right .sec-num{
+  margin: 31% 50px auto auto;
 }
-#sec2 .layer:nth-child(4) div{
-  position: relative;
-  margin: 35% auto auto 400px;
+.right .sec-t{
+  margin: 30% 180px auto auto;
+
+}
+.right .sec-eg{
+  margin: 30% 400px auto auto;
+  padding-top: 60px;
+}
+.right .sec-d{
+  margin: 30% 180px auto auto;
+  padding-top: 100px;
+}
+
+.middle{
+  text-align: center;
+}
+.middle .sec-num {
+  margin: 25% auto;
+}
+.middle .sec-t {
+  margin: 25% auto;
+  padding-top: 50px;
+}
+.middle .sec-eg {
+  margin: 25% auto;
+  padding-top: 140px;
+}
+.middle .sec-d {
+  margin: 25% auto;
+  padding-top: 180px;
 }
 
 
