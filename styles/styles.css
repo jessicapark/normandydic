@@ -12,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 #bgm{
+  z-index: 999;
   position: fixed;
   right: 30px;
   top: 30px;
