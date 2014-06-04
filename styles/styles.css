@@ -632,32 +632,32 @@ section img{
     margin: 30% auto !important;
   }
   #header .layer:nth-child(2) img{
-    width: 50%;
-    height: 50%;
-    margin-left: 25%;
+    width: 60%;
+    height: 60%;
+    margin-left: 20%;
     margin-top: 20%;
   }
   #header .layer:nth-child(3){
     z-index: 999;
   }
   #header .layer:nth-child(4) img{
-    width: 50%;
-    height: 50%;
-    margin-left: 25%;
+    width: 70%;
+    height: 70%;
+    margin-left: 22%;
     margin-top: 20%;
   }
   #header .layer:nth-child(5) img{
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
     margin-left: 20%;
-    margin-top: 20%;
+    margin-top: 14%;
   }
   #header .layer:nth-child(6) img{
     margin: 45% auto;
   }
   #header .layer:nth-child(7) img{
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
     margin-left: 20%;
     margin-top: 25%;
   }
