@@ -103,143 +103,6 @@ audio#myaudio{
   position: absolute;
   top: 50px;
 }
-#ld-date{
-  text-align: center;
-  position: relative;
-  width: 45%;
-  margin: 210px auto auto auto;
-  padding: 5px 0;
-  border-top: double #fff;
-  border-bottom: double #fff;
-}
-#ld-moon{
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  position: absolute;
-  left: 76px;
-  top: 75px;
-  background: #953835;
-}
-#ld-mt1{
-  width: 80px;
-  height: 70px;
-  left: 30px;
-  top: 60px;
-  position: absolute;
-}
-#ld-mt2{
-  width: 80px;
-  height: 70px;
-  left: 85px;
-  top: 90px;
-  position: absolute;
-
-}
-#ld-mt2 img{
-  width: 50%;
-  height: 50%;
-}
-#ld-mt3{
-  width: 80px;
-  height: 70px;
-  left: 160px;
-  top: 80px;
-  position: absolute;
-}
-#ld-circle{
-  background: #272727;
-  width: 300px;
-  height: 300px;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  margin: -150px auto auto -150px;
-  border-radius: 150px;
-  overflow: hidden;
-}
-#ld-border{
-  background: url('../images/ld-wave.png') repeat-x;
-  width: 100%;
-  height: 7px;
-}
-#ld-water{
-  background: #6aa8ad;
-  width: 100%;
-  height: 100%;
-}
-#ld-wave1{
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  -webkit-animation: ld-wave1 0.5s ease-in-out alternate infinite;
-  -moz-animation: ld-wave1 0.5s ease-in-out alternate infinite;
-  animation: ld-wave1 0.5s ease-in-out alternate infinite;
-}
-@-webkit-keyframes ld-wave1{
-  0%{
-    height: 180px;
-  }
-  100%{
-    height: 185px;
-  }
-}
-#ld-boat{
-  width: 59px;
-  height: 23px;
-  position: absolute;
-  right: 100px;
-  bottom: 125px;
-  -webkit-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
-  -moz-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
-  animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
-}
-#ld-boat-ref{
-  width: 59px;
-  height: 23px;
-  position: absolute;
-  bottom: 95px;
-  -webkit-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
-  -moz-animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
-  animation: ld-boat 0.5s ease-in-out alternate infinite 0.02s, boat-along 1s ease-in-out alternate infinite;
-}
-@-webkit-keyframes ld-boat{
-  0%{
-    -webkit-transform: translateY(12px);   
-    -moz-transform: translateY(12px);   
-    transform: translateY(12px);   
-  }
-  100%{
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@-webkit-keyframes boat-along{
-  0%{
-    left: 55%;
-  }
-  100%{
-    left: 60%;
-  }
-}
-#ld-wave2{
-  width: 90%;
-  position: absolute;
-  bottom: 100px;
-  left: 5%;
-  -webkit-animation: ld-wave2 0.5s ease-in-out alternate infinite;
-  -moz-animation: ld-wave2 0.5s ease-in-out alternate infinite;
-  animation: ld-wave2 0.5s ease-in-out alternate infinite;
-}
-@-webkit-keyframes ld-wave2{
-  0%{
-    height: 23px;
-  }
-  100%{
-    height: 33px;
-  }
-}
 
 #header{
   position: relative;
@@ -598,6 +461,10 @@ section img{
     bottom: 30px;
     top: auto;
   }
+  #bgm a img{
+    width: 84px;
+    height: 84px;
+  }
   .sec-num{
     text-align: center;
     margin:10% auto !important;
@@ -687,4 +554,8 @@ section img{
   #slide16{
     margin-left: -35%;
   }
+}
+
+#footer{
+  background: rgba(0,0,0,0.5);
 }
