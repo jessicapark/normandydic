@@ -531,23 +531,19 @@ section img{
   }
   .sec-t{
     margin:340px auto !important;
+    padding-top: 0px;
   }
   .sec-eg{
     text-align: center;
     margin:440px auto !important;
+    padding-top: 0px; 
   }
   .sec-d{
     margin: 500px auto !important;
-    width: 350px;
-    line-height: 20px;
+    width: 90%;
+    line-height: 25px;
     text-align: center;
-    font-size: 18px;
-  }
-  .middle .sec-t {
-    padding-top: 0px;
-  }
-  .middle .sec-eg {
-    padding-top: 0px; 
+    font-size: 20px;
   }
   #header .layer:nth-child(2) img{
     width: 50%;
