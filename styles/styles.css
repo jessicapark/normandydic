@@ -596,6 +596,7 @@ section img{
 @media screen and (max-width: 650px) {
   #bgm{
     bottom: 30px;
+    top: auto;
   }
   .sec-num{
     text-align: center;
@@ -654,6 +655,24 @@ section img{
     position: relative;
     margin: 350px auto;
   }
+  #slide18, #slide08{
+    margin-left:10%;
+  }
+  #slide04,#slide06,#slide11{
+    margin-left:0%;
+  }
 
-
+  #slide12{
+    width: 70%;
+    margin-top: -18% !important;
+    margin-left: 15%;
+  }
+  #slide14{
+    width: 100%;
+    margin-top: -6% !important;
+    margin-left: 3%;
+  }
+  #slide16{
+    margin-left: -35%;
+  }
 }
