@@ -252,6 +252,7 @@ li.layer{
 .scene {
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 .bg_static {
@@ -277,10 +278,10 @@ section{
 }
 section img{
   display: block;
-  width: 124%;
-  height: 124%;
-  margin-top: -12%;
-  margin-left: -12%;
+  width: 120%;
+  height: 120%;
+  margin-top: -10%;
+  margin-left: -10%;
 }
 /*
 #sec1 {
@@ -339,18 +340,18 @@ section img{
   text-align: center;
 }
 .middle .sec-num {
-  margin: 25% auto;
+  margin: 12% auto;
 }
 .middle .sec-t {
-  margin: 25% auto;
+  margin: 12% auto;
   padding-top: 50px;
 }
 .middle .sec-eg {
-  margin: 25% auto;
+  margin: 12% auto;
   padding-top: 140px;
 }
 .middle .sec-d {
-  margin: 25% auto;
+  margin: 12% auto;
   padding-top: 180px;
 }
 
@@ -540,6 +541,13 @@ section img{
     width: 350px;
     line-height: 20px;
     text-align: center;
+    font-size: 18px;
+  }
+  .middle .sec-t {
+    padding-top: 0px;
+  }
+  .middle .sec-eg {
+    padding-top: 0px; 
   }
   #header .layer:nth-child(2) img{
     width: 50%;
