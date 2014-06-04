@@ -61,7 +61,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   font-family: "Georgia","Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Times New Roman","Times",Serif;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 20px;
   background: #111;
   color: #000;
   margin: 0;
@@ -462,8 +462,8 @@ section img{
     top: auto;
   }
   #bgm a img{
-    width: 84px;
-    height: 84px;
+    width: 70px;
+    height: 70px;
   }
   .sec-num{
     text-align: center;
