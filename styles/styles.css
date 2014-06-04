@@ -613,11 +613,23 @@ section img{
   }
   .sec-d{
     margin: 10% auto !important;
-    width: 400px;
+    width: 440px;
     line-height: 25px;
     text-align: center;
     font-size: 20px;
     padding-top: 200px !important;
+  }
+  .bottom .sec-num{
+    margin:30% auto !important;
+  }
+  .bottom .sec-t{
+    margin:30% auto !important;
+  }
+  .bottom .sec-eg{
+    margin:30% auto !important;
+  }
+  .bottom .sec-d{
+    margin: 30% auto !important;
   }
   #header .layer:nth-child(2) img{
     width: 50%;
