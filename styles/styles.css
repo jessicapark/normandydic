@@ -572,6 +572,7 @@ section img{
     display: block;
     width: 80%;
     line-height: 25px;
+    margin: 0 10%;
   }
   #swiper-slide:nth-child(17),#swiper-slide:nth-child(13),#swiper-slide:nth-child(6){
     color: #fff;
