@@ -97,7 +97,7 @@ audio#myaudio{
   line-height: 90px;
   letter-spacing: -2px;
   font-weight: bold;
-  margin: 20% auto 3% auto;
+  margin: 30% auto 3% auto;
 }
 #ld-num{
   color: #a93e3a;
@@ -570,9 +570,8 @@ section img{
   }
   #ld-mobile-tips{
     display: block;
-    width: 80%;
     line-height: 25px;
-    margin: 0 10%;
+    margin: 80px auto;
   }
   #swiper-slide:nth-child(17),#swiper-slide:nth-child(13),#swiper-slide:nth-child(6){
     color: #fff;
