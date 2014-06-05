@@ -17,10 +17,9 @@
 </head>
 <body>
 	<div id="loading">
-		<div id="ld-circle">
-			<div id="ld-num">1944</div>
-			<div>6.6</div>
-		</div>
+		<div id="ld-num-wrap"><span id="ld-num">1944</span>.6.6</div>
+		<div>加载中</div>
+		<div id="ld-mobile-tips">点击右下按钮开启声音，以获得更好的浏览体验</div>
 		<div class="bg_static"></div>
 	</div>
 
@@ -253,7 +252,6 @@
 				
 		</section>
 	</div>
-
 	<div  class="swiper-slide">
 		<section id="">
 				<ul id="" class="scene white bottom">
@@ -330,8 +328,12 @@
 					<li class="layer" data-depth="0.40"><div class="sec-d"><p> 诺曼底墓园，</p><p>美国老兵戴着勋章重返故地，</p><p>缅怀逝去的战友。</p></div></li>
 				</ul>	
 		</section>
-		<section class="scene" id="footer">
+	</div>
 
+	<div  class="swiper-slide">
+		<section id="footer" class="scene">
+			<div id="footer-logo"></div>
+			<div id="footer-share"></div>
 		</section>
 	</div>
 
@@ -373,7 +375,7 @@ var m="";
       //  document.getElementById('scene').style.width = winHeight*3/2 + 400 + "px";
        
       }else{
-       	$('.scene').css({'width':'100%','left':'0','marginLeft':'0' });
+       	$('.scene').css({'width':winWidth,'left':'0','marginLeft':'0' });
         
       }
 
