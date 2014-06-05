@@ -90,9 +90,7 @@ audio#myaudio{
   position: absolute;
 }
 
-.swiper-container{
-  display: none;
-}
+
 #ld-num-wrap {
   font-size: 55px;
   line-height: 90px;
@@ -221,7 +219,7 @@ li.layer{
 .section img{
   display: block;
   width: 120%;
-  height: 120%;
+  height: auto;
   margin-top: -10%;
   margin-left: -10%;
 }
@@ -272,10 +270,11 @@ section img{
 }
 
 .right{
-  text-align: right;
+  
 }
 .right .sec-num{
   margin: 31% 50px auto auto;
+  text-align: right;
 }
 .right .sec-t{
   margin: 30% 180px auto auto;
@@ -286,29 +285,35 @@ section img{
 
 }
 .right .sec-eg{
+  text-align: right;
   margin: 30% 400px auto auto;
   padding-top: 60px;
 }
 .right .sec-d{
+  text-align: right;
   margin: 30% 180px auto auto;
   padding-top: 100px;
 }
 
 .middle{
-  text-align: center;
+  
 }
 .middle .sec-num {
   margin: 12% auto;
+  text-align: center;
 }
 .middle .sec-t {
+ 
   margin: 12% auto;
   padding-top: 50px;
 }
 .middle .sec-eg {
+  text-align: center;
   margin: 12% auto;
   padding-top: 140px;
 }
 .middle .sec-d {
+   text-align: center;
   margin: 12% auto;
   padding-top: 180px;
 }
@@ -446,16 +451,15 @@ section img{
   }
 }
 
-#footer{
-  background: url('../images/footer-bg.jpg') no-repeat;
-  height: 100%;
-  background-size:  100% auto;
+#footer img{
+  
+  height:100%;
 }
 
 #footer-logo{
   width: 265px;
   height: 235px;
-  background: url('../images/footer-logo.png') no-repeat;
+
   margin: 10% auto;
 }
 #footer-share{
@@ -477,6 +481,7 @@ section img{
 }
 .layer img{
   height: auto;
+
 }
 
 #updown {
