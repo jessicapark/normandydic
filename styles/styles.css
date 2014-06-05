@@ -562,8 +562,16 @@ section img{
   #slide16{
     margin-left: -35%;
   }
-  #ld-num{
+  #ld-num-wrap{
+    font-size: 60px;
+  }
+  #loading{
+    font-size: 18px;
+  }
+  #ld-mobile-tips{
     display: block;
+    width: 80%;
+    line-height: 25px;
   }
   #swiper-slide:nth-child(17),#swiper-slide:nth-child(13),#swiper-slide:nth-child(6){
     color: #fff;
