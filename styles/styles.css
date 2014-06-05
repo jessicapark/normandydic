@@ -488,7 +488,7 @@ section img{
   }
   .sec-d{
     margin: 10% auto !important;
-    width: 440px;
+    width: 460px;
     line-height: 25px;
     text-align: center;
     font-size: 20px;
@@ -564,6 +564,9 @@ section img{
   }
   #ld-num{
     display: block;
+  }
+  #swiper-slide:nth-child(17),#swiper-slide:nth-child(13),#swiper-slide:nth-child(6){
+    color: #fff;
   }
 }
 
