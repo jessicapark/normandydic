@@ -464,16 +464,16 @@ section img{
   width: 265px;
   height: 235px;
   background: url('../images/footer-logo.png') no-repeat;
-  margin: 12% auto auto 24%;
+  margin: 12% auto auto 55%;
 }
 #footer-share{
   width: 170px;
-  margin: 12% auto auto 24%;
+  margin: 12% auto auto 55%;
   padding-top: 240px;
 }
 #footer-qr{
   height: 120px;
-  margin: 12% auto auto 58%;
+  margin: 17% auto auto 30%;
   line-height: 35px;
   color: #fff;
   font-weight: bold;
