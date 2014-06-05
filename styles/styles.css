@@ -573,8 +573,8 @@ section img{
     line-height: 25px;
     margin: 80px auto;
   }
-  #swiper-slide:nth-child(17),#swiper-slide:nth-child(13),#swiper-slide:nth-child(6){
-    color: #fff;
+  .swiper-slide:nth-child(17) section ul li,.swiper-slide:nth-child(13) section ul li,.swiper-slide:nth-child(6) section ul li{
+    color: #fff !important;
   }
 }
 
